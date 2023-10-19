@@ -1,0 +1,13 @@
+global:
+  scrape_interval: 15s
+
+scrape_configs:
+  - job_name: 'your-python-app'
+    static_configs:
+      - targets: ['python-app:5000']  # Replace with your Python app's host and port
+
+  - job_name: 'nginx'
+    static_configs:
+      - targets: ['nginx:80']  # Replace with your Nginx host and port
+
+  # Add more scrape jobs as needed for other components of your application.
